@@ -1,1 +1,1 @@
-# CNova-ApiLojistaV2-SDK-Java
+# SDK Java para API V2 de Lojistas
