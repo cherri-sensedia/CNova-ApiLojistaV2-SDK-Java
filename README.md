@@ -37,20 +37,32 @@ API utilizada para gerenciamento de pedidos.
 
 API utilziada na obtenção da árvore de categorias disponível.
 
+	```java
+	CategoriesApi categories = new CategoriesApi(apiClient);
+	
+	GetCategoriesResponse resp = categories.getCategories(0, 5);
+	
+	for (Category category : resp.getCategories()) {
+		System.out.println(category.getId() + " - " + category.getName());
+	}
+	```
+
 ### Sites API
 
 API utilizada na obtenção da lista de sites.
 
-		SitesApi sites = new SitesApi(apiClient);
-		GetSitesResponse resp = sites.getSites();
-		
-		System.out.println(resp);
+	'''java
+	SitesApi sites = new SitesApi(apiClient);
+	GetSitesResponse resp = sites.getSites();
+	
+	System.out.println(resp);
+	'''
 
 ### Warehouses API
 
 API utilizada na obtenção da lista de warehouses (armazéns).
 
-		WarehousesApi warehouses = new WarehousesApi(apiClient);
-		GetWarehousesResponse resp = warehouses.getWarehouses();
-		
-		System.out.println(resp);
+	WarehousesApi warehouses = new WarehousesApi(apiClient);
+	GetWarehousesResponse resp = warehouses.getWarehouses();
+	
+	System.out.println(resp);
